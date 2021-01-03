@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-2">
+            <div class="btn-group btn-group-toggle container" >
+                <div class="row">
+                    <label [ngClass]="(model.left)?'btn-success':'btn-danger'" class="col-12"ngbButtonLabel>
+                    <input type="checkbox" ngbButton [(ngModel)]="model.left"> Left
+                    </label>
+                    <label [ngClass]="(model.middle)?'btn-success':'btn-danger'" class="btn-primary d-inline col-12" ngbButtonLabel>
+                    <input type="checkbox" ngbButton [(ngModel)]="model.middle"> Middle
+                    </label>
+                    <label [ngClass]="(model.right)?'btn-success':'btn-danger'" class="btn-primary d-inline col-12" ngbButtonLabel>
+                    <input type="checkbox" ngbButton [(ngModel)]="model.right"> Right
+                    </label>
+                </div> 
+            </div>
+            <hr>
+            <pre>{{model | json}}</pre> 
+
+        </div>
+
+
+
+        <app-line-chart class="col-10"></app-line-chart>
+    </div>    
+</div>
+
+
+
+
+
